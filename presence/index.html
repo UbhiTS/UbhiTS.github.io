@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presence - a live talking avatar for your AI coding agent</title>
+  <meta name="description" content="Presence adds a live talking-avatar face, HD voice, and hands-free voice prompts to Jetski and Google Antigravity agents.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./"><span class="dot" aria-hidden="true"></span>Presence</a>
+    <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Your agent, with a face and a voice.</h1>
+      <p class="lede">Presence is a free side-panel plugin for Jetski and Google Antigravity. It reads your agent's replies out loud in natural HD voice, shows a live talking avatar while it speaks, and lets you talk back hands-free.</p>
+    </section>
+
+    <section>
+      <h2>What it does</h2>
+      <ul>
+        <li><strong>Speaks your agent's replies</strong> in one of 30 Gemini Live HD voices, with a choice of 11 avatars.</li>
+        <li><strong>Live talking-avatar video</strong> (24 frames per second) when connected to your own Google Cloud project.</li>
+        <li><strong>Hands-free prompts:</strong> press the mic, speak, and Presence sends your words to the agent conversation you're working in.</li>
+        <li><strong>Stays quiet in meetings</strong> if you choose to turn on meeting awareness.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Two ways to connect</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Gemini API key</h3>
+          <p>Paste a key from Google AI Studio. You get HD voice with an animated portrait. No Google sign-in needed.</p>
+        </div>
+        <div class="card">
+          <h3>Sign in with Google</h3>
+          <p>Connect your own Google Cloud project to unlock the 24 FPS talking-avatar video, which runs on Vertex AI in that project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why Presence asks for Google Cloud access</h2>
+      <p>When you choose <strong>Sign in with Google</strong>, Presence asks for two things:</p>
+      <ul>
+        <li><strong>Your email address</strong>, so it can show which Google account is connected.</li>
+        <li><strong>Google Cloud access</strong> (the <code>cloud-platform</code> permission), so it can, on your behalf and in your own project:
+          <ul>
+            <li>list the Google Cloud projects you can use, so you can pick one;</li>
+            <li>check whether the Vertex AI API, billing, and your permissions are ready;</li>
+            <li>only after you click to confirm: enable the Vertex AI API, link a billing account, grant your account the Vertex AI User role, or create a new project;</li>
+            <li>start Gemini Live sessions on Vertex AI in that project to generate the avatar's voice and video.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Presence runs entirely on your computer. There is no Presence server: your sign-in stays on your machine, requests go straight from your computer to Google, and any usage is billed to the Google Cloud project you choose. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+    </section>
+
+    <section>
+      <h2>Disconnecting</h2>
+      <p>Use <strong>Sign out</strong> (or <strong>Disconnect</strong>) in Presence settings. This deletes the saved sign-in from your computer and asks Google to revoke it. You can also remove Presence's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions or problems: <a href="mailto:ubhits@gmail.com">ubhits@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+  </footer>
+</body>
+</html>
