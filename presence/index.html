@@ -6,36 +6,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presence - a live talking avatar for your AI coding agent</title>
   <meta name="description" content="Presence adds a live talking-avatar face, HD voice, and hands-free voice prompts to Jetski and Google Antigravity agents.">
+  <meta property="og:title" content="Presence - give your agent a face">
+  <meta property="og:description" content="A live talking avatar, HD voice, and hands-free voice prompts for your AI coding agent.">
+  <meta property="og:image" content="https://ubhits.github.io/presence/maya-poster.jpg">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="gridlines" aria-hidden="true"></div>
+
   <header class="top">
-    <a class="brand" href="./"><span class="dot" aria-hidden="true"></span>Presence</a>
-    <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    <a class="brand" href="./"><img src="logo.svg" alt="" width="28" height="28">Presence</a>
+    <nav><a href="#how">How it works</a><a href="#access">Google access</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Your agent, with a face and a voice.</h1>
-      <p class="lede">Presence is a free side-panel plugin for Jetski and Google Antigravity. It reads your agent's replies out loud in natural HD voice, shows a live talking avatar while it speaks, and lets you talk back hands-free.</p>
+      <div class="hero-copy">
+        <span class="pill"><span class="live" aria-hidden="true"></span>Gemini Live · talking avatar</span>
+        <h1>Give your agent<br><span class="grad">a face and a voice.</span></h1>
+        <p class="lede">Presence is a free side-panel plugin for Jetski and Google Antigravity. It reads your agent's replies out loud in natural HD voice, shows a live talking avatar while it speaks, and lets you talk back hands-free.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#how">See how it works</a>
+          <a class="btn ghost" href="#access">What Presence can access</a>
+        </div>
+        <ul class="chips" aria-label="Highlights">
+          <li>🎥 24 FPS talking avatar</li>
+          <li>🎙️ Hands-free voice</li>
+          <li>☁️ Runs on your own Google Cloud</li>
+          <li>💤 Nothing runs while idle</li>
+        </ul>
+      </div>
+
+      <figure class="stage">
+        <div class="frame">
+          <video id="maya" src="maya.mp4" poster="maya-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Maya, a Presence avatar, introducing herself"></video>
+          <button id="hear" class="hear" type="button" aria-pressed="false">🔊 Hear Maya</button>
+        </div>
+        <figcaption><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>“Hi, I'm Maya. I give your agent a face and a voice, so it can talk you through your day.”</figcaption>
+      </figure>
     </section>
 
-    <section>
-      <h2>What it does</h2>
-      <ul>
-        <li><strong>Speaks your agent's replies</strong> in one of 30 Gemini Live HD voices, with a choice of 11 avatars.</li>
-        <li><strong>Live talking-avatar video</strong> (24 frames per second), running on your own Google Cloud project.</li>
-        <li><strong>Hands-free prompts:</strong> press the mic, speak, and Presence sends your words to the agent conversation you're working in.</li>
-        <li><strong>Stays quiet in meetings</strong> if you choose to turn on meeting awareness.</li>
-      </ul>
+    <section class="features" aria-label="What it does">
+      <article class="card">
+        <div class="ico">🗣️</div>
+        <h3>Speaks your agent's replies</h3>
+        <p>In one of 30 Gemini Live HD voices, with a choice of 11 avatars.</p>
+      </article>
+      <article class="card">
+        <div class="ico">🎥</div>
+        <h3>Live talking-avatar video</h3>
+        <p>Lip-synced video at 24 frames per second, running on your own Google Cloud project.</p>
+      </article>
+      <article class="card">
+        <div class="ico">🎙️</div>
+        <h3>Hands-free prompts</h3>
+        <p>Press the mic, speak, and Presence sends your words to the agent conversation you're working in.</p>
+      </article>
+      <article class="card">
+        <div class="ico">🤫</div>
+        <h3>Stays quiet in meetings</h3>
+        <p>If you turn on meeting awareness, Presence mutes itself while you're on a call.</p>
+      </article>
     </section>
 
-    <section>
-      <h2>How you connect</h2>
-      <p>Click <strong>Sign in with Google</strong> in Presence and pick a Google Cloud project. The avatar's voice and video run on Vertex AI in that project.</p>
+    <section id="how" class="block">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Add Presence</h3><p>Install it from the plugin marketplace in Jetski or Google Antigravity. It opens in your side panel.</p></li>
+        <li><span class="n">2</span><h3>Sign in with Google</h3><p>Pick a Google Cloud project. The avatar's voice and video run on Vertex AI in that project.</p></li>
+        <li><span class="n">3</span><h3>Say “Hi Maya”</h3><p>Talk or type. Your agent does the work, and Presence tells you about it.</p></li>
+      </ol>
     </section>
 
-    <section>
+    <section id="access" class="block panel">
       <h2>Why Presence asks for Google Cloud access</h2>
       <p>When you choose <strong>Sign in with Google</strong>, Presence asks for two things:</p>
       <ul>
@@ -49,15 +95,20 @@
           </ul>
         </li>
       </ul>
-      <p>Presence runs entirely on your computer. There is no Presence server: your sign-in stays on your machine, requests go straight from your computer to Google, and any usage is billed to the Google Cloud project you choose. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+      <div class="trust">
+        <div><span>💻</span><p><strong>Runs on your computer.</strong> There is no Presence server.</p></div>
+        <div><span>🔐</span><p><strong>Your sign-in stays on your machine.</strong> Requests go straight from your computer to Google.</p></div>
+        <div><span>🧾</span><p><strong>Billed to your project.</strong> Any usage is billed to the Google Cloud project you choose.</p></div>
+      </div>
+      <p>See the <a href="privacy.html">Privacy Policy</a> for details.</p>
     </section>
 
-    <section>
+    <section class="block">
       <h2>Disconnecting</h2>
       <p>Use <strong>Sign out</strong> (or <strong>Disconnect</strong>) in Presence settings. This deletes the saved sign-in from your computer and asks Google to revoke it. You can also remove Presence's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
     </section>
 
-    <section>
+    <section class="block">
       <h2>Contact</h2>
       <p>Questions or problems: <a href="mailto:ubhits@gmail.com">ubhits@gmail.com</a></p>
     </section>
@@ -66,5 +117,21 @@
   <footer>
     <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
   </footer>
+
+  <script>
+    (function () {
+      var v = document.getElementById('maya');
+      var b = document.getElementById('hear');
+      if (!v || !b) return;
+      b.addEventListener('click', function () {
+        var on = v.muted;
+        if (on) { v.currentTime = 0; }
+        v.muted = !on;
+        v.play();
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        b.textContent = on ? '🔇 Mute' : '🔊 Hear Maya';
+      });
+    })();
+  </script>
 </body>
 </html>
