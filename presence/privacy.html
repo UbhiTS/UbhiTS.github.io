@@ -49,18 +49,37 @@
     </ul>
 
     <h2>Where your information is stored</h2>
+    <p>Everything Presence keeps stays on your computer. It keeps:</p>
     <ul>
-      <li>Your Google sign-in (a refresh token) is stored only on your computer, in Presence's data folder, with file permissions that restrict access to your user account.</li>
-      <li>Short-lived access tokens are kept in memory only and are never written to logs.</li>
-      <li>Your preferences (voice, avatar, settings) are stored locally on your computer.</li>
-      <li>Presence keeps no copies of your data anywhere else.</li>
+      <li><strong>Your Google sign-in</strong> (a refresh token) and your connection settings (account email, chosen project), in Presence's data folder.</li>
+      <li><strong>Your preferences</strong> (avatar, voice, display name, speech detail).</li>
+      <li><strong>Recent Presence chat cards</strong> (your recent spoken or typed commands and the avatar's spoken summaries), in the panel's local browser storage so they're still there when you reopen it.</li>
+      <li><strong>Short avatar clips</strong> it generates for quick acknowledgements (for example, "Got it!"), cached so they can play instantly.</li>
+      <li><strong>A meeting status file</strong>, only if you use the optional meeting awareness.</li>
+    </ul>
+    <p>Short-lived access tokens are kept in memory only and are never written to disk or logs. Presence keeps no copies of your data anywhere else, and the developer never receives any of it.</p>
+
+    <h2>How Presence protects your data</h2>
+    <ul>
+      <li>All requests to Google go directly from your computer over encrypted connections (HTTPS/TLS and secure WebSockets).</li>
+      <li>Files in Presence's data folder are created with permissions that only your user account can read.</li>
+      <li>Presence's local helper only listens on your own computer (127.0.0.1) and requires a per-session security token, so other websites and other people can't use it.</li>
+    </ul>
+
+    <h2>Data retention and deletion</h2>
+    <ul>
+      <li>Your sign-in and connection settings are kept until you sign out or uninstall Presence. Signing out deletes them right away and asks Google to revoke the sign-in.</li>
+      <li>Recent chat cards are limited to a short recent history; older cards are dropped automatically. Clearing the panel's site data, or uninstalling Presence, deletes them.</li>
+      <li>Cached avatar clips and preferences are kept until you uninstall Presence or delete its data folder.</li>
+      <li>Content sent to Vertex AI in your Google Cloud project is processed under your own Google Cloud terms; Presence does not keep a copy of it.</li>
     </ul>
 
     <h2>Sharing</h2>
     <p>Presence does not sell, rent, or share your information with anyone. The only party that receives data is Google, through the Google APIs listed above, and only to provide the features you use. Your use of those Google services is also covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the Google Cloud terms.</p>
 
     <h2>Google API Services User Data Policy</h2>
-    <p>Presence's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the user-facing features described above, is not used for advertising, is not transferred to others, and is not read by humans.</p>
+    <p>Presence's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the user-facing features described above, is not used for advertising, is not sold, is not transferred to others, and is not read by humans.</p>
+    <p>Presence does not use Google user data, including any data from Google Workspace APIs, to develop, improve, or train generalized or non-personalized AI or machine-learning models, and does not transfer it to anyone for that purpose.</p>
 
     <h2>Your choices and removing data</h2>
     <ul>
