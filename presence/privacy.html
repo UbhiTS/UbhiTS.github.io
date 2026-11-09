@@ -14,22 +14,19 @@
 
   <main>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective November 5, 2026</p>
+    <p class="meta">Effective November 9, 2026</p>
 
     <p>Presence is a side-panel plugin for Jetski and Google Antigravity that gives your AI agent a talking avatar and voice. This policy explains what information Presence uses, why, where it is kept, and how to remove it.</p>
 
     <h2>The short version</h2>
     <ul>
-      <li>Presence runs on your own computer. There is no Presence server, and the developer never receives your data, sign-in, or API key.</li>
+      <li>Presence runs on your own computer. There is no Presence server, and the developer never receives your data or sign-in.</li>
       <li>Presence only talks to Google services, directly from your computer, to do what you asked.</li>
       <li>Presence does not use analytics, advertising, or tracking, and does not sell or share your data.</li>
     </ul>
 
     <h2>Information Presence uses</h2>
-    <h3>If you connect with a Gemini API key</h3>
-    <p>Your API key is saved on your computer and sent only to Google's Gemini API to generate speech.</p>
-
-    <h3>If you choose "Sign in with Google"</h3>
+    <h3>When you choose "Sign in with Google"</h3>
     <p>Presence requests these Google permissions:</p>
     <ul>
       <li><strong>Email address</strong> (<code>openid</code>, <code>userinfo.email</code>): shown in Presence so you know which account is connected.</li>
@@ -46,21 +43,21 @@
 
     <h3>Content you ask Presence to speak or hear</h3>
     <ul>
-      <li><strong>Agent replies:</strong> to speak a reply, Presence sends a short spoken summary of your agent's reply text to the Gemini Live API (Gemini API or Vertex AI in your project, depending on how you connected).</li>
+      <li><strong>Agent replies:</strong> to speak a reply, Presence sends a short spoken summary of your agent's reply text to the Gemini Live API on Vertex AI in your chosen project.</li>
       <li><strong>Voice prompts:</strong> when you press the mic, speech-to-text is done by your browser's built-in speech recognition or by the Jetski/Antigravity app you're using. The resulting text is sent to your agent conversation.</li>
       <li><strong>Meeting awareness (optional):</strong> Presence can stay quiet during meetings only if you have separate calendar/meeting command-line tools installed. It reads whether you are in a meeting right now and keeps a small status file on your computer. This does not use your Presence Google sign-in.</li>
     </ul>
 
     <h2>Where your information is stored</h2>
     <ul>
-      <li>Your API key or Google sign-in (a refresh token) is stored only on your computer, in Presence's data folder, with file permissions that restrict access to your user account.</li>
+      <li>Your Google sign-in (a refresh token) is stored only on your computer, in Presence's data folder, with file permissions that restrict access to your user account.</li>
       <li>Short-lived access tokens are kept in memory only and are never written to logs.</li>
       <li>Your preferences (voice, avatar, settings) are stored locally on your computer.</li>
       <li>Presence keeps no copies of your data anywhere else.</li>
     </ul>
 
     <h2>Sharing</h2>
-    <p>Presence does not sell, rent, or share your information with anyone. The only party that receives data is Google, through the Google APIs listed above, and only to provide the features you use. Your use of those Google services is also covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the terms of the Google service you use (Gemini API or Google Cloud).</p>
+    <p>Presence does not sell, rent, or share your information with anyone. The only party that receives data is Google, through the Google APIs listed above, and only to provide the features you use. Your use of those Google services is also covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the Google Cloud terms.</p>
 
     <h2>Google API Services User Data Policy</h2>
     <p>Presence's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is used only to provide the user-facing features described above, is not used for advertising, is not transferred to others, and is not read by humans.</p>
