@@ -123,13 +123,28 @@
       var v = document.getElementById('maya');
       var b = document.getElementById('hear');
       if (!v || !b) return;
+      function reset() {
+        v.muted = true;
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = '🔊 Hear Maya';
+      }
       b.addEventListener('click', function () {
-        var on = v.muted;
-        if (on) { v.currentTime = 0; }
-        v.muted = !on;
-        v.play();
-        b.setAttribute('aria-pressed', on ? 'true' : 'false');
-        b.textContent = on ? '🔇 Mute' : '🔊 Hear Maya';
+        if (v.muted) {
+          // Play the introduction once with sound, from the start.
+          v.loop = false;
+          v.currentTime = 0;
+          v.muted = false;
+          v.play();
+          b.setAttribute('aria-pressed', 'true');
+          b.textContent = '🔇 Mute';
+        } else {
+          v.pause();
+          reset();
+        }
+      });
+      // After she finishes speaking, stop on the last frame instead of starting over.
+      v.addEventListener('ended', function () {
+        if (!v.muted) { v.pause(); reset(); }
       });
     })();
   </script>
